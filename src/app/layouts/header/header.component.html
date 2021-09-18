@@ -1,0 +1,103 @@
+<div class="body">
+  <!-- navbar goes here -->
+  <nav class="relative bg-white-600  shadow-md ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6  ">
+      <div class="flex justify-between">
+        <div class="flex space-x-20">
+
+          <!-- log  -->
+          <div>
+            <a href="" class="flex items-center py-5 px-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd"
+                  d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z"
+                  clipRule="evenodd" />
+              </svg>
+              <span>Ace</span>
+            </a>
+          </div>
+          <!-- primary nav -->
+          <div class="hidden md:flex items-center px-16 space-x-3">
+
+
+            <button type="button" [matMenuTriggerFor]="solutions"
+              class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              aria-expanded="false">
+              <span>Solutions</span>
+              <!--
+              Heroicon name: solid/chevron-down
+              Item active: "text-gray-600", Item inactive: "text-gray-400"
+            -->
+              <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <mat-menu #solutions="matMenu" class="absolute w-auto">
+              <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Redial</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voice mail</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Disable alerts</span>
+              </button>
+
+            </mat-menu>
+
+
+            <a href=""
+              class="text-gray-500 group  items-center text-base font-medium hover:text-gray-900  py-5 px-2">Team</a>
+            <a href=""
+              class="text-gray-500 group  items-center text-base font-medium hover:text-gray-900  py-5 px-2">About</a>
+            <a href=""
+              class="text-gray-500 group  items-center text-base font-medium hover:text-gray-900  py-5 px-2">Contact</a>
+            <a routerLink="shop"
+              class="text-gray-500 group  items-center text-base font-medium hover:text-gray-900  py-5 px-2">Shop</a>
+            <a routerLink="admin"
+              class="text-gray-500 group  items-center text-base font-medium hover:text-gray-900  py-5 px-2">Admin</a>
+          </div>
+        </div>
+        <!-- secondary nav -->
+        <div class="hidden md:flex items-center space-x-5">
+          <a routerLink="cart">
+            <mat-icon matBadge="{{cart}}" matBadgeColor="warn">shopping_cart</mat-icon>
+          </a>
+          <button mat-button mat-raised-button class="py-5 px-1" color="primary">Login</button>
+          <button mat-button mat-raised-button class="py-5 px-1" color="accent">Signup</button>
+
+        </div>
+        <!-- mobile menu -->
+        <div class="md:hidden flex items-center">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu class="md:hidden" #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- content goes here  -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 ">
+    <img class="w-full " src="../../../assets/Img/banner.jpg" alt="">
+  </div>
+</div>
